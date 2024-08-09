@@ -1,28 +1,46 @@
 // Bringing in the required import from 'react-router-dom'
-import { Link } from 'react-router-dom';
-import Navbar from './UI/Navbar';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
+  const currentPage = useLocation().pathname;
   // The Navbar UI component will render each of the Link elements in the links prop
   return (
     <>
     <h1>Hello to my Portofolio v2 using REACT</h1>
-    <Navbar
-      links={[
-        <Link key={2} className="nav-link text-light" to="/">
+    <ul className="nav nav-tabs">
+      <li className="nav-item">
+        <Link
+          to="/"
+          className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+        >
           About Me
-        </Link>,
-        <Link key={3} className="nav-link text-light" to="/portafolio">
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link
+          to="/portafolio"
+          className={currentPage === '/portafolio' ? 'nav-link active' : 'nav-link'}
+        >
           Portafolio
-        </Link>,
-        <Link key={4} className="nav-link text-light" to="/contact">
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link
+          to="/contact"
+          className={currentPage === '/contact' ? 'nav-link active' : 'nav-link'}
+        >
           Contact
-        </Link>,
-        <Link key={5} className="nav-link text-light" to="/resume">
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link
+          to="/resume"
+          className={currentPage === '/resume' ? 'nav-link active' : 'nav-link'}
+        >
           Resume
-      </Link>,
-      ]}
-    />
+        </Link>
+      </li>
+    </ul>
     </>
   );
 }

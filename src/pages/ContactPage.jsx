@@ -1,8 +1,17 @@
 import { useState } from 'react';
-import '../utils/style.css';
+import '../styles/ContactPage.css';
 
 // Here we import a helper function that will check if the email is valid
 import { checkPassword, validateEmail } from '../utils/helpers';
+
+const style = {
+  button: {
+    // display: flex,
+	  borderRadius: 12,
+	  // cursor: pointer,
+	  marginBottom: 10
+  }
+}
 
 function ContactPage() {
   // Create state variables for the fields in the form
@@ -54,9 +63,9 @@ function ContactPage() {
   };
 
   return (
-    <div className="container text-center">
-      <h1>Contact Me: {userName}</h1>
-      <form className="form" onSubmit={handleFormSubmit}>
+    <div class="container text-center">
+      <h1>Contact Me:</h1>
+      <form class="form" onSubmit={handleFormSubmit}>
         <input
           value={email}
           name="email"
@@ -78,11 +87,11 @@ function ContactPage() {
           type="password"
           placeholder="Password"
         />
-        <button type="submit">Submit</button>
+        <button style={style} type="submit">Submit</button>
       </form>
       {errorMessage && (
         <div>
-          <p className="error-text">{errorMessage}</p>
+          <p class="error-text">{errorMessage}</p>
         </div>
       )}
     </div>

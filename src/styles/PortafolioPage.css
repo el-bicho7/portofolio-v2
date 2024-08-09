@@ -1,0 +1,50 @@
+ul {
+  list-style: none;
+}
+
+li {
+  padding-top: 20px;
+}
+
+button {
+	display: flex;
+	border-radius: 12px;
+	background-size: cover;
+	background-position: center;
+	min-width: 100%;	
+	min-height: 50vh;
+	cursor: pointer;
+	filter: grayscale(80%);
+	position: static;
+	margin-bottom: 10px;
+}
+
+button:hover {
+	filter: grayscale(0%);
+	border: 10px rgba(0, 0, 0, 0.571) solid;
+	cursor: pointer;
+}
+
+.tech-btn {
+  background-image: url('../utils/images/blog-img.jpg');
+}
+
+.backend-btn {
+  background-image: url('../utils/images/back-end.jpg');
+}
+
+.employee-btn {
+  background-image: url('../utils/images/employee-tracker.jpg');
+}
+
+.render-btn {
+  background-image: url('../utils/images/matrix.jpg');
+}
+
+.logo-btn {
+  background-image: url('../utils/images/logo-maker.jpg');
+}
+
+.weather-btn {
+  background-image: url('../utils/images/weather.jpg');
+}

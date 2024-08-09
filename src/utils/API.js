@@ -1,14 +1,14 @@
-import axios from 'axios';
+// import axios from 'axios';
 
-const getUsers = () => {
-  return axios.get('https://jsonplaceholder.typicode.com/users/');
-};
+// const getUsers = () => {
+//   return axios.get('https://jsonplaceholder.typicode.com/users/');
+// };
 
-const getSingleUser = (paramId) => {
-  return axios.get(`https://jsonplaceholder.typicode.com/users/${paramId}`);
-};
+// const getSingleUser = (paramId) => {
+//   return axios.get(`https://jsonplaceholder.typicode.com/users/${paramId}`);
+// };
 
-export default {
-  getUsers,
-  getSingleUser,
-};
+// export default {
+//   getUsers,
+//   getSingleUser,
+// };

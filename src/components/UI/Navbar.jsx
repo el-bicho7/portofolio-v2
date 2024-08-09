@@ -1,4 +1,7 @@
+import { useLocation } from 'react-router-dom';
+
 export default function Nav({ links }) {
+  const currentPage = useLocation().pathname;
   return (
     <nav className="navbar navbar-expand-lg bg-secondary">
       <div className="container-fluid">
