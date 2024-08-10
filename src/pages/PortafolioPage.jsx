@@ -4,57 +4,65 @@ import "../styles/PortafolioPage.css";
 export default function PortafolioPage() {
   return (
     <>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-center">
-            <ul>
-              <li>
-                <a
-                  class="portafolio tech-btn"
-                  href="https://the-tech-blog-i15l.onrender.com/"
-                ></a>
-                <p>Tech Blog</p>
-              </li>
-              <li>
-                <a
-                  class="portafolio tech-btn"
-                  href="https://github.com/el-bicho7/back-end"
-                ></a>
-                <p>Back End</p>
-              </li>
-              <li>
-                <a
-                  class="portafolio employee-btn"
-                  href="https://github.com/el-bicho7/Employee_tracker"
-                ></a>
-                <p>Employee Tracker</p>
-              </li>
-            </ul>
+      <div class="container text-center">
+        <h4>Sites</h4>
+        <div class="row g-2">
+          <div class="col-6">
+            <div class="p-3">
+              <a
+                class="portafolio tech-btn"
+                href="https://the-tech-blog-i15l.onrender.com/"
+              ></a>
+              <p>Tech Blog</p>
+            </div>
           </div>
-          <div class="col-md-6 text-center">
-            <ul>
-              <li>
-                <a
-                  class="portafolio note-taker-btn"
-                  href="https://note-taker-sy1f.onrender.com/"
-                ></a>
-                <p>Note Taker</p>
-              </li>
-              <li>
-                <a
-                  class="portafolio logo-btn"
-                  href="https://github.com/el-bicho7/logo-maker"
-                ></a>
-                <p>Logo Maker</p>
-              </li>
-              <li>
-                <a
-                  class="portafolio weather-btn"
-                  href="https://github.com/el-bicho7/weatherForecast"
-                ></a>
-                <p>Weather Forecast</p>
-              </li>
-            </ul>
+          <div class="col-6">
+            <div class="p-3">
+              <a
+                class="portafolio note-taker-btn"
+                href="https://note-taker-sy1f.onrender.com/"
+              ></a>
+              <p>Note Taker</p>
+            </div>
+          </div>
+        </div>
+        <h4>Repositories</h4>
+        <div class="row g-2">
+          <div class="col-6">
+            <div class="p-3">
+              <a
+                class="portafolio backend-btn"
+                href="https://github.com/el-bicho7/back-end"
+              ></a>
+              <p>Back End</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3">
+              <a
+                class="portafolio employee-btn"
+                href="https://github.com/el-bicho7/Employee_tracker"
+              ></a>
+              <p>Employee Tracker</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3">
+              <a
+                class="portafolio weather-btn"
+                href="https://github.com/el-bicho7/weatherForecast"
+              ></a>
+              <p>Weather Forecast</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3">
+              <a
+                class="portafolio logo-btn"
+                href="https://github.com/el-bicho7/logo-maker"
+              ></a>
+              <p>Logo Maker</p>
+            </div>
           </div>
         </div>
       </div>

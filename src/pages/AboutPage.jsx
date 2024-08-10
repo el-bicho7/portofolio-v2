@@ -23,8 +23,8 @@ export default function AboutPage() {
                 </div>
                 <h3>Bio</h3>
                 <p className="lead mb-0">
-                  Hello my name is Cristian Loera. i'm from Ciudad Juarez,
-                  Chihuahua, Mexico.
+                  Hello my name is Cristian Loera. I live in Ciudad Juarez,
+                  Chihuahua, Mexico. I'm a graduate from UDLAP. <br></br>
                 </p>
               </div>
             </div>

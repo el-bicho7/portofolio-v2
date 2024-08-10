@@ -13,6 +13,7 @@ export default function ResumePage() {
         </div>
         <div className="container pt-4">
           <h4>Abilities</h4>
+          <p>Here are some of my programming skills</p>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">HTML</li>
             <li class="list-group-item">CSS</li>
