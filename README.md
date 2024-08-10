@@ -4,6 +4,14 @@
 
 This is my portofolio v.2. This portofolio is deplyed with REACT. This portofolio contains a little About Me, my Portofolio, Contact, and my Resume.
 
+Here are the links to the repository and the site.
+
+- Repository
+  https://github.com/el-bicho7/portofolio-v2
+
+- Site
+  https://portofolio-v2.onrender.com
+
 ## Table of Contents
 
 - [Installation](#installation)
