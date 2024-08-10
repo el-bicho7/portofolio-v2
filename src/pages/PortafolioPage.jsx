@@ -11,7 +11,7 @@ export default function PortafolioPage() {
               <li>
                 <a
                   class="portafolio tech-btn"
-                  href="https://github.com/el-bicho7/the-tech-blog"
+                  href="https://the-tech-blog-i15l.onrender.com/"
                 ></a>
                 <p>Tech Blog</p>
               </li>
@@ -35,10 +35,10 @@ export default function PortafolioPage() {
             <ul>
               <li>
                 <a
-                  class="portafolio render-btn"
-                  href="https://github.com/el-bicho7/mini_render_project"
+                  class="portafolio note-taker-btn"
+                  href="https://note-taker-sy1f.onrender.com/"
                 ></a>
-                <p>Render</p>
+                <p>Note Taker</p>
               </li>
               <li>
                 <a
