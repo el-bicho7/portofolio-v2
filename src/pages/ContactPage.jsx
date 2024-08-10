@@ -1,25 +1,15 @@
-import { useState } from 'react';
-import '../styles/ContactPage.css';
+import { useState } from "react";
 
 // Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from '../utils/helpers';
-
-const style = {
-  button: {
-    // display: flex,
-	  borderRadius: 12,
-	  // cursor: pointer,
-	  marginBottom: 10
-  }
-}
+import { checkPassword, validateEmail } from "../utils/helpers";
 
 function ContactPage() {
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
-  const [email, setEmail] = useState('');
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -28,12 +18,12 @@ function ContactPage() {
     const inputValue = target.value;
 
     // Based on the input type, we set the state of either email, username, and password
-    if (inputType === 'email') {
+    if (inputType === "email") {
       setEmail(inputValue);
-    } else if (inputType === 'userName') {
+    } else if (inputType === "userName") {
       setUserName(inputValue);
     } else {
-      setPassword(inputValue);
+      setMessage(inputValue);
     }
   };
 
@@ -43,55 +33,60 @@ function ContactPage() {
 
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
     if (!validateEmail(email) || !userName) {
-      setErrorMessage('Email or username is invalid');
+      setErrorMessage("Email or username is invalid");
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
       // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
     }
-    if (!checkPassword(password)) {
-      setErrorMessage(
-        `Choose a more secure password for the account: ${userName}`
-      );
-      return;
-    }
-    alert(`Hello ${userName}`);
+
+    alert(`${userName}, your message was received`);
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setUserName('');
-    setPassword('');
-    setEmail('');
+    setUserName("");
+    setMessage("");
+    setEmail("");
   };
 
   return (
-    <div class="container text-center">
+    <div className="container text-center">
       <h1>Contact Me:</h1>
-      <form class="form" onSubmit={handleFormSubmit}>
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="email"
-        />
-        <input
-          value={userName}
-          name="userName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="username"
-        />
-        <input
-          value={password}
-          name="password"
-          onChange={handleInputChange}
-          type="password"
-          placeholder="Password"
-        />
-        <button style={style} type="submit">Submit</button>
+      <form className="" onSubmit={handleFormSubmit}>
+        <div className="row p-2">
+          <input
+            value={email}
+            name="email"
+            onChange={handleInputChange}
+            type="email"
+            placeholder="email"
+          />
+        </div>
+        <div className="row p-2">
+          <input
+            value={userName}
+            name="userName"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="username"
+          />
+        </div>
+        <div className="row p-2">
+          <textarea
+            rows="6"
+            maxLength="200"
+            value={message}
+            name="message"
+            onChange={handleInputChange}
+            type="message"
+            placeholder="Leave message here..."
+          />
+        </div>
+        <button className="btn btn-primary" type="submit">
+          Submit
+        </button>
       </form>
       {errorMessage && (
         <div>
-          <p class="error-text">{errorMessage}</p>
+          <p className="error-text">{errorMessage}</p>
         </div>
       )}
     </div>
